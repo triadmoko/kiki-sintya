@@ -41,7 +41,7 @@
   <link href="images/webclip.html" rel="apple-touch-icon">
 </head>
 
-<body class="body">
+<body class="body" onload="AudioStart()">
   <div class="undangan-wrapper">
     <div class="cover">
       <div class="wrapper-cover">
@@ -54,7 +54,7 @@
         <div class="_16dark bottom20">Turut Mengundang Kel.Besar Bapak Suroso & Ibu Fatzelma </div>
         <div class="_16dark bottom20">Beserta Mamak, Urang Sumando, Sanak Family dan Kedua Mempelai yang Berbahagia
         </div>
-        <div class="_16dark bottom20 tgl"><b>05 Juni 2022</b></div>
+        <div class="_16dark bottom20 tgl"><b>03 - 05 Juni 2022</b></div>
         <div class="nama top20" style="font-weight:bold;">Assiki Denny Fatrosa</div>
         <div class="nama">&amp;</div>
         <div class="nama bottom20" style="font-weight:bold;">Sintya Yulia Pratama</div>
@@ -126,12 +126,12 @@
       </div>
       <div class="_16dark top20 notop">Kediaman Pria, Simpang nan Sayang, Panyakalan</div>
     </div>
-  </div>
-  <div class="himbauan">
-    <div class="himbauan-text">Dimohon untuk para tamu undangan agar tetap mematuhi protokol kesehatan yang berlaku.
+
+    <div class="himbauan">
+      <div class="himbauan-text">Dimohon untuk para tamu undangan agar tetap mematuhi protokol kesehatan yang berlaku.
+      </div>
     </div>
-  </div>
-  <!-- <div class="album">
+    <!-- <div class="album">
     <div class="title">ALbum Wedding</div>
     <div class="w-layout-grid grid-photo">
       <img src="https://akanikah.com/front/tema-preview/classic-1/images/galeri1.jpg" loading="lazy" alt="" class="img">
@@ -144,53 +144,33 @@
       <img src="https://akanikah.com/front/tema-preview/classic-1/images/galeri8.jpg" loading="lazy" alt="" class="img">
     </div>
   </div> -->
-  <!-- <div class="comment">
+    <!-- <div class="comment">
     <div class="youtube-video-container">
       <iframe width="100%" height="315" src="https://www.youtube.com/embed/xooP_KOIAXk" frameborder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div> -->
 
-  <div class="peta">
-    <div class="title">Peta Lokasi</div>
-    <div class="petanya">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63830.457269831764!2d100.65210657238667!3d-0.8261393457101868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e2b346d2d62537d%3A0x5bba8ec16722c97e!2sPanyakalan%2C%20Kubung%2C%20Solok%20Regency%2C%20West%20Sumatra!5e0!3m2!1sen!2sid!4v1653203689141!5m2!1sen!2sid"
-        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-  </div>
-  <div class="comment">
-    <h3 class="h3 m24 ldark">BERIKAN UCAPAN</h3>
-
-    <div class="wrapper-ucapan">
-      <div class="form-block w-form">
-        <form id="email-form" name="email-form" data-name="Email Form" class="form-ucapan">
-          <label for="name" class="label">Nama</label>
-          <input type="text" class="text-field-2 w-input" maxlength="256" name="name" data-name="Name"
-            placeholder="Masukkan nama kamu" id="name" required="">
-          <label for="ucapan" class="label">Masukkan ucapanmu</label>
-          <textarea name="pesan" placeholder="Berikan ucapan terbaikmu untuk calon mempelai" id="" cols="30" rows=""
-            class="text-field-2 w-input"></textarea>
-          <input type="submit" value="Kirim Ucapan" data-wait="Please wait..." class="submit-button w-button">
-        </form>
-        <div class="w-form-done">
-          <div>Thank you! Your submission has been received!</div>
-        </div>
-        <div class="w-form-fail">
-          <div>Oops! Something went wrong while submitting the form.</div>
-        </div>
+    <div class="peta">
+      <div class="title">Peta Lokasi</div>
+      <div class="petanya">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63830.457269831764!2d100.65210657238667!3d-0.8261393457101868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e2b346d2d62537d%3A0x5bba8ec16722c97e!2sPanyakalan%2C%20Kubung%2C%20Solok%20Regency%2C%20West%20Sumatra!5e0!3m2!1sen!2sid!4v1653203689141!5m2!1sen!2sid"
+          width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
-    <div class="wrapper-comment">
-      <div class="item-comment">
-        <div class="comentator">Abd Rahman</div>
-        <p class="p-comment">Selamat berbahagia, sehat dan langgeng selalu.</p>
+    <div class="comment">
+      <h3 class="h3 m24 ldark">BERIKAN UCAPAN</h3>
+      <div class="wrapper-ucapan">
+        <div class="form-block w-form">
+          <div id="comment-section"></div>
+        </div>
       </div>
     </div>
   </div>
   <br><br><br>
-  <audio autoplay controls>
+  <audio id="myAudio" autoplay controls style="display: none;">
     <source src="https://akanikah.com/front/musik/audio-love.mp3" type="audio/mpeg">
   </audio>
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=607d1b06de33a9ac8bb8f8ad"
@@ -209,6 +189,23 @@
         link.classList.add("is-active");
       });
     });
+  </script>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myAudio").autoplay;
+      document.getElementById("test").innerHTML = x;
+    }
+  </script>
+  <script type="text/javascript" src="https://latest.cactus.chat/cactus.js"></script>
+  <link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css">
+  <script>
+    initComments({
+      node: document.getElementById("comment-section"),
+      defaultHomeserverUrl: "https://matrix.cactus.chat:8448",
+      serverName: "cactus.chat",
+      siteName: "kiki-sintya.tdfprogramming.com",
+      commentSectionId: "1"
+    })
   </script>
 </body>
 
